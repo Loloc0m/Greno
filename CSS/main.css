@@ -704,7 +704,7 @@ and add some margin under the icon for spacing.
 /* End contact */
 /* Start footer */
 .footer {
-    background-color: var(--second-color);
+    background-color: black;
     padding: 20px;
     color: var(--third-color);
     width: 100%;
@@ -721,14 +721,14 @@ and add some margin under the icon for spacing.
 }
 
 .footer .info p:last-of-type {
-    color: #222;
+    color: white;
     font-weight: bold;
     /* text-transform: uppercase; */
 
 }
 
 .footer .info p span {
-    color: var(--third-color);
+    color: #999;
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: underline wavy #999;
@@ -736,14 +736,14 @@ and add some margin under the icon for spacing.
 }
 
 .footer .info p span:hover {
-    color: black;
+    color: white;
     text-decoration: none;
 
 }
 
 .footer .info p i {
-    /* color: #0A66C2; */
-    color: var(--third-color);
+    color: #0A66C2;
+    /* color: var(--third-color); */
 }
 
 @media (max-width: 767px) {
