@@ -15,6 +15,11 @@
     padding: 0;
 }
 
+::selection {
+    color: #fff;
+    background-color: var(--second-color);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -188,13 +193,13 @@ header p a {
 }
 
 header p::first-letter {
-    color: var(--main-color);
+    color: var(--second-color);
     /* letter-spacing: 5px; */
     font-size: 35px;
 }
 
 header i {
-    color: var(--second-color);
+    color: greenyellow;
 }
 
 header img {
@@ -221,6 +226,7 @@ header .links .icon {
     flex-wrap: wrap;
     justify-content: flex-end;
     cursor: pointer;
+    transition: .4s;
 }
 
 header .links .icon span {
@@ -307,16 +313,38 @@ header .links ul li:not(:last-child) a {
 .landing .intro-text {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 29%;
     width: 340px;
     max-width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
 }
 
+/* Small Screen */
+@media (max-width: 767px) {
+    .landing .intro-text {
+        top: 31%;
+    }
+}
+
+/* media Screen */
+@media (max-width: 992px) {
+    .landing .intro-text {
+        top: 31%;
+    }
+}
+
 .landing .intro-text h1 {
     font-size: 50px;
     color: #000;
+}
+
+.landing .intro-text h1 span {
+    background-color: var(--third-color);
+    width: fit-content;
+    color: var(--second-color);
+    display: inline-block;
+    border-radius: 15px;
 }
 
 .landing .intro-text p {
@@ -352,6 +380,7 @@ header .links ul li:not(:last-child) a {
 .features .feat:hover {
     cursor: pointer;
     border-radius: 10px;
+    /* transform: scaleX(-10px), translateY(-10px); */
 }
 
 .features .feat:nth-child(1):hover {
@@ -411,7 +440,13 @@ and add some margin under the icon for spacing.
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 100px;
-    /* gap: 30px; */
+    gap: 30px;
+}
+
+@media (max-width: 767px) {
+    .services .services-content {
+        gap: 0;
+    }
 }
 
 .services .services-content .srv {
@@ -493,52 +528,52 @@ and add some margin under the icon for spacing.
 }
 
 /* End services */
-/* Start portfolio */
-.portfolio {
+/* Start projects */
+.projects {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     background-color: var(--section-background);
 }
 
-.portfolio .portfolio-contant {
+.projects .projects-contant {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 80px;
 }
 
-.portfolio .portfolio-contant .card {
+.projects .projects-contant .card {
     background-color: var(--third-color);
     border-radius: 10px;
 }
 
-.portfolio .portfolio-contant .card img {
+.projects .projects-contant .card img {
     max-width: 100%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-.portfolio .portfolio-contant .card .info {
+.projects .projects-contant .card .info {
     padding: 20px;
 }
 
-.portfolio .portfolio-contant .card .info h3 {
+.projects .projects-contant .card .info h3 {
     margin-bottom: 15px;
-    transition: 0.5s;
+    transition: 0.3s all;
     width: fit-content;
 }
 
-.portfolio .portfolio-contant .card .info h3:hover {
+.projects .projects-contant .card .info h3:hover {
     color: var(--second-color);
     cursor: pointer;
 }
 
-.portfolio .portfolio-contant .card .info p {
+.projects .projects-contant .card .info p {
     color: #777;
 
 }
 
-/* End portfolio */
+/* End projects */
 /* Start about */
 .about {
     padding-top: var(--section-padding);
@@ -661,6 +696,12 @@ and add some margin under the icon for spacing.
     color: var(--second-color);
     letter-spacing: -2;
     margin-bottom: 30px;
+}
+
+.contact .info .label span {
+    background-color: var(--second-color);
+    color: #fff;
+    width: fit-content;
 }
 
 .contact .info .link {
